@@ -25,11 +25,11 @@ https://github.com/AlexTheAnalyst/Excel-Tutorial/blob/main/Excel%20Project%20Dat
 1. Download, store and organise resources in a folder locally
 2. Cerate master XLS file and import all available raw and taxonomy data into the file
 3. Clean raw data and perform the following checks:
-  1. Data types
-  2. Duplicates
-  3. Null values
-  4. Unclear values (i.e. M and F in Gender column to Male and Female)
-  5. Baised values (i.e. values outside of the expected range etc.)
+    1. Data types
+    2. Duplicates
+    3. Null values
+    4. Unclear values (i.e. M and F in Gender column to Male and Female)
+    5. Baised values (i.e. values outside of the expected range etc.)
 4. Prepare the data
 
 
