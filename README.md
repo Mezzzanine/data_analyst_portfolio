@@ -1,7 +1,7 @@
 # data_analyst_portfolio
 That is a collection of works within Data Analysis
 
-## Purpose of the project
+## Purpose of the project Retail_sales_dashboard.xlsx
 
 1. Create an interactive dashboard to monitor sales in e-commerce projects.
     1. Sales over time
