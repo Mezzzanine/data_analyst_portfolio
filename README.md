@@ -3,36 +3,36 @@ That is a collection of works within Data Analysis
 
 ## Purpose of the project
 
-**List of questions:**
-
-- How do customer age and gender influence their purchasing behaviour?
-- Are there discernible patterns in sales across different time periods?
-- Which product categories hold the highest appeal among customers?
-- What are the relationships between age, spending, and product preferences?
-- How do customers adapt their shopping habits during seasonal trends?
-- Are there distinct purchasing behaviours based on the number of items bought per transaction?
-- What insights can be gleaned from the distribution of product prices within each category?
+1. Create an interactive dashboard to monitor sales in e-commerce projects.
+    1. Sales over time
+    2. Average Order Value
+    3. Product analysis
+    4. Demographic analysis   
+3. Showcase the abilities of a Data Analyst working with Excel and data in general
 
 ## Related Resources
-- Kaggle:
-https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset
-- Countries list:
-https://developers.google.com/public-data/docs/canonical/countries_csv]
-- Customer's Data:
-https://github.com/AlexTheAnalyst/Excel-Tutorial/blob/main/Excel%20Project%20Dataset.xlsx
+- [Kaggle] (https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset)
+- [EU Countries list] (https://github.com/ajturner/acetate/blob/master/places/Countries-Europe.csv)
+- [Customer's Data] (https://github.com/AlexTheAnalyst/Excel-Tutorial/blob/main/Excel%20Project%20Dataset.xlsx) by @AlexTheAnalyst
 
 ## Process
 1. Download, store and organise resources in a folder locally
 2. Cerate master XLS file and import all available raw and taxonomy data into the file
 3. Clean raw data and perform the following checks:
-    1. Data types
-    2. Duplicates
-    3. Null values
+    1. Data types 
+    2. Duplicates using `Find Duplicates` feature
+    3. Null values using `COUNTIF` function
     4. Unclear values (i.e. M and F in Gender column to Male and Female)
     5. Baised values (i.e. values outside of the expected range etc.)
 4. Prepare the data
-
-
+   1. Add bucketed age groups using the nested `IF` function
+   2. Add the information about customers and countries to the main table using `VLOOKUP` function
+   3. Since we don't have any country from the original dataset, I would like to assign it randomly.
+      1. Add country IDs to the country table
+      2. Add a country ID column and a random integer number within a range of the number of countries to the customer table using `RAND` and `INT` functions
+      3. Add a new table Country Name and Lookup a country name from the table using `XLOOKUP` function
+5. Create a dashboard
+    1. Create multiple charts and slicers to be able to filter the data according to business needs
 
 
 
