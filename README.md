@@ -10,6 +10,11 @@ That is a collection of works within Data Analysis
     4. Demographic analysis   
 3. Showcase the abilities of a Data Analyst working with Excel and data in general
 
+## Dashboard
+
+<img width="945" alt="Screenshot 2023-10-10 at 10 41 20" src="https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/e27fbe6f-5fb9-4abe-b960-316dd45b60d7">
+
+
 ## Related Resources
 - [Kaggle] (https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset)
 - [EU Countries list] (https://github.com/ajturner/acetate/blob/master/places/Countries-Europe.csv)
