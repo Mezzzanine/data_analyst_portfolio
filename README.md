@@ -52,7 +52,7 @@ To check the dashboard, please download and open a file [Retail_sales_dashboard.
 ## Cleaning data using SQL
 
 <img width="1006" alt="image" src="https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/abc36034-8f3b-467e-a452-1896780982b6">
-
+To check the SQL file please download it [data_cleaning_SQL.sql](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/data_cleaning_SQL.sql)
 ### Purpose of the project
 
 1. Prepare data to be able to work with them in a database
@@ -60,7 +60,7 @@ To check the dashboard, please download and open a file [Retail_sales_dashboard.
 
 ### Related Resources
 
-1. [Dataset](https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/Data%20Cleaning%20Portfolio%20Project%20Queries.sql) by @AlexTheAnalyst
+1. [Dataset](https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/Nashville%20Housing%20Data%20for%20Data%20Cleaning.xlsx) by @AlexTheAnalyst
 2. [W3 School](https://www.w3schools.com/)
 3. [Stackoverflow](https://stackoverflow.com/)
 
