@@ -1,7 +1,17 @@
 # data_analyst_portfolio
 That is a collection of works within Data Analysis
 
-## Purpose of the project Retail_sales_dashboard.xlsx
+Table of contents
+1. Creation of Excel Interactive Dashboard
+2. Cleaning data using SQL
+
+## Creation of Excel Interactive Dashboard
+
+<img width="945" alt="Screenshot 2023-10-10 at 10 41 20" src="https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/e27fbe6f-5fb9-4abe-b960-316dd45b60d7">
+
+To check the dashboard, please download and open a file [Retail_sales_dashboard.xlsx] (https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/Retail_sales_dashboard.xlsx)
+
+### Purpose of the project
 
 1. Create an interactive dashboard to monitor sales in e-commerce projects.
     1. Sales over time
@@ -10,17 +20,13 @@ That is a collection of works within Data Analysis
     4. Demographic analysis   
 3. Showcase the abilities of a Data Analyst working with Excel and data in general
 
-## Dashboard
 
-<img width="945" alt="Screenshot 2023-10-10 at 10 41 20" src="https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/e27fbe6f-5fb9-4abe-b960-316dd45b60d7">
-
-
-## Related Resources
+### Related Resources
 - [Kaggle] (https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset)
 - [EU Countries list] (https://github.com/ajturner/acetate/blob/master/places/Countries-Europe.csv)
 - [Customer's Data] (https://github.com/AlexTheAnalyst/Excel-Tutorial/blob/main/Excel%20Project%20Dataset.xlsx) by @AlexTheAnalyst
 
-## Process
+### Process
 1. Download, store and organise resources in a folder locally
 2. Cerate master XLS file and import all available raw and taxonomy data into the file
 3. Clean raw data and perform the following checks:
@@ -38,6 +44,15 @@ That is a collection of works within Data Analysis
       3. Add a new table Country Name and Lookup a country name from the table using `XLOOKUP` function
 5. Create a dashboard
     1. Create multiple charts and slicers to be able to filter the data according to business needs
+
+## Cleaning data using SQL
+
+### Purpose of the project
+
+1. Prepare data to be able to work with them in a database
+2. Showcase wide range of 
+
+### Related Resources
 
 
 
