@@ -2,8 +2,8 @@
 That is a collection of works within Data Analysis
 
 Table of contents
-1. [Creation of Excel Interactive Dashboard] (https://github.com/Mezzzanine/data_analyst_portfolio#creation-of-excel-interactive-dashboard)
-2. [Cleaning data using SQL] (https://github.com/Mezzzanine/data_analyst_portfolio#cleaning-data-using-sql)
+1. [Creation of Excel Interactive Dashboard](https://github.com/Mezzzanine/data_analyst_portfolio#creation-of-excel-interactive-dashboard)
+2. [Cleaning data using SQL](https://github.com/Mezzzanine/data_analyst_portfolio#cleaning-data-using-sql)
 3. Tableau [To be added]
 4. Python [To be added]
 
@@ -13,7 +13,7 @@ Table of contents
 
 <img width="945" alt="Screenshot 2023-10-10 at 10 41 20" src="https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/e27fbe6f-5fb9-4abe-b960-316dd45b60d7">
 
-To check the dashboard, please download and open a file [Retail_sales_dashboard.xlsx] (https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/Retail_sales_dashboard.xlsx)
+To check the dashboard, please download and open a file [Retail_sales_dashboard.xlsx](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/Retail_sales_dashboard.xlsx)
 
 ### Purpose of the project
 
@@ -26,9 +26,9 @@ To check the dashboard, please download and open a file [Retail_sales_dashboard.
 
 
 ### Related Resources
-- [Kaggle] (https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset)
-- [EU Countries list] (https://github.com/ajturner/acetate/blob/master/places/Countries-Europe.csv)
-- [Customer's Data] (https://github.com/AlexTheAnalyst/Excel-Tutorial/blob/main/Excel%20Project%20Dataset.xlsx) by @AlexTheAnalyst
+- [Kaggle](https://www.kaggle.com/datasets/mohammadtalib786/retail-sales-dataset)
+- [EU Countries list](https://github.com/ajturner/acetate/blob/master/places/Countries-Europe.csv)
+- [Customer's Data](https://github.com/AlexTheAnalyst/Excel-Tutorial/blob/main/Excel%20Project%20Dataset.xlsx) by @AlexTheAnalyst
 
 ### Process
 1. Download, store and organise resources in a folder locally
@@ -60,9 +60,9 @@ To check the dashboard, please download and open a file [Retail_sales_dashboard.
 
 ### Related Resources
 
-1. [Dataset] (https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/Data%20Cleaning%20Portfolio%20Project%20Queries.sql) by @AlexTheAnalyst
-2. [W3 School] (https://www.w3schools.com/)
-3. [Stackoverflow] (https://stackoverflow.com/)
+1. [Dataset](https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/Data%20Cleaning%20Portfolio%20Project%20Queries.sql) by @AlexTheAnalyst
+2. [W3 School](https://www.w3schools.com/)
+3. [Stackoverflow](https://stackoverflow.com/)
 
 ### Process
 
