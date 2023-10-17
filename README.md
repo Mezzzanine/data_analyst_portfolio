@@ -4,7 +4,7 @@ That is a collection of works within Data Analysis
 Table of contents
 1. [Creation of Excel Interactive Dashboard](https://github.com/Mezzzanine/data_analyst_portfolio#creation-of-excel-interactive-dashboard)
 2. [Cleaning data using SQL](https://github.com/Mezzzanine/data_analyst_portfolio#cleaning-data-using-sql)
-3. [Visualising data using Looker]()
+3. [Visualising data using Looker](https://github.com/Mezzzanine/data_analyst_portfolio#visualising-data-using-google-looker-studio)
 4. Python [To be added]
 
 
@@ -128,3 +128,9 @@ TablePlus
 9. Connecting the database data source to Looker Studio as a resource.
 10. Create and customise dashboards to meet project requirements.
 
+### Tech stack
+Ubuntu 23.04
+MariaDB 10.11.2
+TablePlus
+QDB
+Looker Studio
