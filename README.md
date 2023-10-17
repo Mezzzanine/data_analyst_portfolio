@@ -4,9 +4,8 @@ That is a collection of works within Data Analysis
 Table of contents
 1. [Creation of Excel Interactive Dashboard](https://github.com/Mezzzanine/data_analyst_portfolio#creation-of-excel-interactive-dashboard)
 2. [Cleaning data using SQL](https://github.com/Mezzzanine/data_analyst_portfolio#cleaning-data-using-sql)
-3. Tableau [To be added]
+3. [Visualising data using Looker]()
 4. Python [To be added]
-
 
 
 ## Creation of Excel Interactive Dashboard
@@ -79,3 +78,53 @@ To check the SQL file please download it [data_cleaning_SQL.sql](https://github.
 ### Tech stack
 MySQL 8.1.0,
 TablePlus
+
+## Visualising Data using Google Looker Studio
+
+<img width="772" alt="image" src="https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/c7efd3b5-eec1-4984-999b-484807a5d10d">
+
+[Dashboard link](https://lookerstudio.google.com/reporting/fd8679b4-f529-4012-b2cb-a89b0503b1d2)
+
+### Purpose of the project
+
+1. Create an interactive dashboard to monitor sales/inventory/staff in the Food Delivery project. And reflect the following items, that imaginable client would like to check:
+    1. Order activity
+        1. Total orders
+        2. Total sales
+        3. Total items
+        4. Average order value
+        5. Sales by category
+        6. Top selling items
+        7. Orders by hour
+        8. Sales by hour
+        9. Orders by address
+        10. Orders by delivery/pick up
+    3. Inventory
+        1. Wants to be able to know when it's time to order new stock.
+            1. What ingredients go into each pizza their quantity is based on the size of the pizza.
+            2. The existing stock level.
+    5. Staff
+        1. Wants to know which staff members are working when.
+        2. Based on the staff salary information, how much does each pizza cost (ingredients+chefs+delivery)?
+3. Showcase the abilities of a Data Analyst working with MySQL/MariaDB database, SQL and Google Looker Studio.
+
+
+### Related Resources
+
+- [Tutorial](https://www.youtube.com/watch?v=0rB_memC-dA) by Adam Finer
+
+### Process
+
+1. Create a client brief and define the initial data structure from it in Excel.
+2. Create an architecture of a relational database using the [QDB Diagram tool](https://app.quickdatabasediagrams.com/#/d/JJxpxx). This process includes defining Primary and Foreign keys for each table and also data types.
+3. Create a database on a dedicated server. I chose MariaDB due to the ease of installation on *nix systems and the fact of being familiar with administrative parts and syntaxis similar to MySQL.
+4. Create users to manage the data and work with external data consumers (Google Looker Studio).
+5. Create a table structure in the database and assign correct datatypes to columns using `CREATE TABLE`, `ALTER TABLE` etc
+6. Populate tables with data using CSV export.
+7. Following the client brief create specific views with SQL queries to provide necessary data to the dashboard data.
+    1. Orders. Aggregate all the necessary data from different tables in one view using `JOIN` statement
+    2. Staff. Aggregate the data from multiple tables using `JOIN` and calculate Staff Cost and Hours in Shift metrics using `HOUR` and `MINUTE` clause
+    3. Stock. Aggregate all the necessary information for calculating stocks and inventory using CTE, calculations and `JOIN` features
+9. Connecting the database data source to Looker Studio as a resource.
+10. Create and customise dashboards to meet project requirements.
+
