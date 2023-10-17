@@ -51,7 +51,9 @@ To check the dashboard, please download and open a file [Retail_sales_dashboard.
 ## Cleaning data using SQL
 
 <img width="1006" alt="image" src="https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/abc36034-8f3b-467e-a452-1896780982b6">
-To check the SQL file please download it [data_cleaning_SQL.sql](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/data_cleaning_SQL.sql)
+
+To check the SQL file please download it [data_cleaning_SQL.sql(https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/data_cleaning_SQL.sql)
+
 ### Purpose of the project
 
 1. Prepare data to be able to work with them in a database
@@ -112,6 +114,8 @@ TablePlus
 ### Related Resources
 
 - [Tutorial](https://www.youtube.com/watch?v=0rB_memC-dA) by Adam Finer
+- [MariaDB Knowledge Base](https://mariadb.com/kb/en/)
+- [Looker Studio Documentation](https://cloud.google.com/looker/docs)
 
 ### Process
 
