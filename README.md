@@ -5,7 +5,7 @@ Table of contents
 1. [Creation of Excel Interactive Dashboard](https://github.com/Mezzzanine/data_analyst_portfolio#creation-of-excel-interactive-dashboard)
 2. [Cleaning data using SQL](https://github.com/Mezzzanine/data_analyst_portfolio#cleaning-data-using-sql)
 3. [Visualising data using Looker](https://github.com/Mezzzanine/data_analyst_portfolio#visualising-data-using-google-looker-studio)
-4. [Data scrapping, transformation with Python and visualisation with Tableau](https://github.com/Mezzzanine/data_analyst_portfolio/tree/main#popularity-of-german-names-from-1890-to-2018)
+4. [Data scrapping, transformation with Python and visualisation with Tableau](https://github.com/Mezzzanine/data_analyst_portfolio/tree/main?tab=readme-ov-file#popularity-of-german-names-from-1890-to-2018)
 
 
 ## Creation of Excel Interactive Dashboard
