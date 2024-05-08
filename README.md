@@ -5,7 +5,7 @@ Table of contents
 1. [Creation of Excel Interactive Dashboard](https://github.com/Mezzzanine/data_analyst_portfolio#creation-of-excel-interactive-dashboard)
 2. [Cleaning data using SQL](https://github.com/Mezzzanine/data_analyst_portfolio#cleaning-data-using-sql)
 3. [Visualising data using Looker](https://github.com/Mezzzanine/data_analyst_portfolio#visualising-data-using-google-looker-studio)
-4. Python [To be added]
+4. [Data scrapping, transformation with Python and visualisation with Tableau](https://github.com/Mezzzanine/data_analyst_portfolio/tree/main#popularity-of-german-names-from-1890-to-2018)
 
 
 ## Creation of Excel Interactive Dashboard
@@ -153,15 +153,15 @@ Living in Germany with a complicated-to-pronounce name could be a personal chall
 
 1. First I need to get the data. I checked several open data resources like Government Databases, Kaggle and so on, but didn't find any data that fully represented the time period and data quality I needed.
 2. I decided to search on the internet and found a [website](https://www.beliebte-vornamen.de/) that publicized the top 25 names split by year and gender
-    1. I wrote a web scrapper using Python to collect the data from the website and format it as I needed.
+    1. I wrote a web scrapper using [Python](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/names.py) to collect the data from the website and format it as I needed.
     2. As a result I had a CSV file with needed data. 
 3. To create a viz I also needed data about the population or the number of newborn children.
     1. I downloaded the dataset from the Government website
-    2. I wrote a script to populate this information into the CSV
+    2. I wrote a [Python](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/population.py) script to populate this information into the CSV
+        1. Calculation of the distribution of population around the placement. Since I had only data related to placement I would need to estimate how many people could have a name from the 1st place to the second etc.
+        2. I used a hyperbolic function to estimate the number of names that were given to children in respective years and gender. 
 4. Visualisation in Tableau
-    1. Calculation of the distribution of population around the places. Since I had only data related to places I would need to estimate how many people could have a name from the 1st place to the second etc.
-    2. I used a hyperbolic function to estimate the number of names that were given to children in respective years and gender. 
-    3. Create the race bar chart to illustrate how the number of names changes over time using running sum and ranking functions
+    1. Create the race bar chart to illustrate how the number of names changes over time using running sum and ranking functions
 
 ### Tech stack
 Python 3
