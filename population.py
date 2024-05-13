@@ -1,13 +1,46 @@
 import pandas as pd
 import numpy as np
 
+df_usa_names = pd.read_csv('usa.csv')
+df_french_names = pd.read_csv('french_names.csv', delimiter=';')
+df_spanish_names = pd.read_csv('spain.csv', delimiter=';')
+
+# Remove commas from the 'Population' column and convert to integers
+df_usa_names['Population'] = df_usa_names['Population'].str.replace(',', '').astype(int)
+
+# Handle NA values
+df_french_names = df_french_names.dropna(subset=['Population'])
+df_spanish_names = df_spanish_names.dropna(subset=['number'])
+
+# Truncate datasets to have 200 rows
+df_usa_names = df_usa_names.head(200)
+df_french_names = df_french_names.head(200)
+df_spanish_names = df_spanish_names.head(200)
+
+# Add ranks to each dataset
+df_usa_names['Rank'] = df_usa_names['Population'].rank(ascending=False).astype(int)
+df_french_names['Rank'] = df_french_names['Population'].rank(ascending=False).astype(int)
+df_spanish_names['Rank'] = df_spanish_names['number'].rank(ascending=False).astype(int)
+
+# Calculate the total population for each country
+total_population_usa = df_usa_names['Population'].sum()
+total_population_france = df_french_names['Population'].sum()
+total_population_spain = df_spanish_names['number'].sum()
+
+# Calculate the percentage of the total population for each rank
+df_usa_names['percentage'] = (df_usa_names['Population'] / total_population_usa) * 100
+df_french_names['percentage'] = (df_french_names['Population'] / total_population_france) * 100
+df_spanish_names['percentage'] = (df_spanish_names['number'] / total_population_spain) * 100
+
+# Calculate average percentages
+avg_percentages = np.mean([df_usa_names['percentage'], df_french_names['percentage'], df_spanish_names['percentage']], axis=0)
+df_avg_percentages = pd.DataFrame({'Rank': range(1, 201), 'Average Percentages': avg_percentages})
+
 df_population = pd.read_csv('german_population.csv', delimiter=';')
 df_names = pd.read_csv('names.csv')
 
-# Define a dictionary to map gender codes to their respective genders
+# Map the 'Gender' column
 gender_mapping = {'m': 'Male', 'f': 'Female'}
-
-# Map the 'Gender' column in the names DataFrame to the full gender names
 df_names['Gender'] = df_names['Gender'].map(gender_mapping)
 
 # Melt the DataFrame to reshape it
@@ -16,39 +49,22 @@ melted_df = pd.melt(df_population, id_vars=['Year'], value_vars=['Male', 'Female
 # Function to clean population values and convert to integer
 def clean_population(population):
     if isinstance(population, float):
-        return int(population * 1000)  # Multiply by 1000 to convert from float to integer
+        return int(population * 1000)
     return int(population.replace('.', ''))
 
 # Clean the population column
-melted_df['Population'] = melted_df['Population'].apply(clean_population)
+melted_df['Population'] = melted_df['Population'].astype(int)
 
 merged_df = pd.merge(melted_df, df_names, on=['Year', 'Gender'], how='inner')
 
 # Sort the names DataFrame by 'Year' and 'Placement'
 merged_df.sort_values(by=['Year', 'Gender', 'Placement'], inplace=True)
 
-def hyperbolic_coefficients(max_placement, majority_coefficient=0.4):
-    coefficients = [majority_coefficient / rank for rank in range(1, max_placement + 1)]
-    return coefficients
+# Merge the Main dataset with an average precentages from Spain, USA, France
+complete_df = pd.merge(merged_df, df_avg_percentages, left_on='Placement', right_on='Rank', how='left')
+complete_df.drop(['Rank',], axis=1, inplace=True)
 
-# Determine the maximum placement in the dataset
-max_placement = min(merged_df['Placement'].max(), 25)  # Limit to 25 for hyperbolic calculation
+# Calculate approximate number of names depending on population
+complete_df['Approximate Names'] = (complete_df['Population'] * complete_df['Average Percentages']) / 10
 
-# Calculate coefficients using hyperbolic function
-coefficients = hyperbolic_coefficients(max_placement)
-
-# Function to calculate approximate number of names based on placement and coefficients
-def calculate_approx_names(row):
-    total_population = row['Population']
-    placement = row['Placement']
-    coefficient = coefficients[placement - 1] if placement <= 25 else 0.012
-    return round(total_population * coefficient, 2)
-
-# Apply the function to calculate approximate names and create a new column
-merged_df['Approx_Names'] = merged_df.apply(calculate_approx_names, axis=1)
-
-# Save the DataFrame to a new CSV file
-merged_df.to_csv('names_calculation.csv', index=False)
-
-print(merged_df.head())
-
+complete_df.to_csv('names_calculation.csv', index=False)
