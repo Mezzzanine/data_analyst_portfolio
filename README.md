@@ -126,7 +126,7 @@ TablePlus
 5. Create a table structure in the database and assign correct datatypes to columns using `CREATE TABLE`, `ALTER TABLE` etc
 6. Populate tables with data using CSV export.
 7. Following the client brief create specific views with SQL queries to provide necessary data to the dashboard data.
-    1. Orders. Aggregate all the necessary data from different tables in one view using `JOIN` statement
+    1. Orders. Aggregate all the necessary data from different tables in one view using the `JOIN` statement
     2. Staff. Aggregate the data from multiple tables using `JOIN` and calculate Staff Cost and Hours in Shift metrics using `HOUR` and `MINUTE` clause
     3. Stock. Aggregate all the necessary information for calculating stocks and inventory using CTE, calculations and `JOIN` features
 9. Connecting the database data source to Looker Studio as a resource.
@@ -151,17 +151,21 @@ Living in Germany with a complicated-to-pronounce name could be a personal chall
 
 ### Process
 
-1. First I need to get the data. I checked several open data resources like Government Databases, Kaggle and so on, but didn't find any data that fully represented the time period and data quality I needed.
-2. I decided to search on the internet and found a [website](https://www.beliebte-vornamen.de/) that publicized the top 25 names split by year and gender
-    1. I wrote a web scrapper using [Python](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/names.py) to collect the data from the website and format it as I needed.
-    2. As a result I had a CSV file with needed data. 
-3. To create a viz I also needed data about the population or the number of newborn children.
-    1. I downloaded the dataset from the Government website
-    2. I wrote a [Python](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/population.py) script to populate this information into the CSV
-        1. Calculation of the distribution of population around the placement. Since I had only data related to placement I would need to estimate how many people could have a name from the 1st place to the second etc.
-        2. I used a hyperbolic function to estimate the number of names that were given to children in respective years and gender. 
+1. First I needed to get the data. I checked several open data resources like Government Databases, Kaggle and others, but didn't find any data that fully represented the time period and data quality I needed.
+2. I searched on the internet and found a [website](https://www.beliebte-vornamen.de/) that publicized the top 25 names split by year and gender
+    1. I wrote a web scrapper using [Python](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/names.py) to collect the data from the website and format it as I needed using Pandas
+    2. I only had top chart data, which is hard to visualize over time. I decided to add the approximate number of children born with that name. But this data is also hard to find. For that, I need the population of Germany and the distribution of names across the data
+    3. I downloaded the dataset with the German population from the Government [website](https://www-genesis.destatis.de/genesis//online?operation=table&code=12411-0001&bypass=true&levelindex=0&levelid=1715616937977#abreadcrumb)
+    4. I wrote a second [Python](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/population.py) script
+        1. I decided to check on how the distribution looks like for any other country. Luckily I found data for the [USA](https://namecensus.com/baby-names/popular-boy-names/), [France](https://www.insee.fr/fr/statistiques/7633685?sommaire=7635552#consulter) and [Spain](https://ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177009&menu=resultados&idp=1254734710990#_tabs-1254736195498) quite quickly
+           ![2024-05-13 18 13 56](https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/cf8236c6-cd9b-45a4-9720-71ecf553ff8d)
+        3. After a quick analysis it turns out that the data distributes identically, so I can apply these coefficients to the German dataset
 4. Visualisation in Tableau
-    1. Create the race bar chart to illustrate how the number of names changes over time using running sum and ranking functions
+    1. Create the race bar chart to illustrate how the number of names changes over time using running sum and ranking functions.
+    2. I spotted the big differences in naming fashion in 3 different periods: Before World War 2, After and in United Germany, so I've added this as a filter.
+
+### Outcome
+I've studied the list of names popular in different periods for Males and Females and created a short-list for picking another nickname that I can use to introduce myself.
 
 ### Tech stack
 Python 3
