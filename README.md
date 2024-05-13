@@ -1,4 +1,4 @@
-# data_analyst_portfolio
+# Data Analyst Portfolio by Sergei Levkov
 That is a collection of works within Data Analysis
 
 Table of contents
