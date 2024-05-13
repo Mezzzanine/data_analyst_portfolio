@@ -52,7 +52,7 @@ To check the dashboard, please download and open a file [Retail_sales_dashboard.
 
 <img width="1006" alt="image" src="https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/abc36034-8f3b-467e-a452-1896780982b6">
 
-To check the SQL file please download it [data_cleaning_SQL.sql(https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/data_cleaning_SQL.sql)
+To check the SQL file please download it [data_cleaning_SQL.sql](https://github.com/Mezzzanine/data_analyst_portfolio/blob/main/data_cleaning_SQL.sql)
 
 ### Purpose of the project
 
