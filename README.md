@@ -147,7 +147,7 @@ Living in Germany with a complicated-to-pronounce name could be a personal chall
 
 ![ezgif-7-017b9ae246](https://github.com/Mezzzanine/data_analyst_portfolio/assets/19992624/f7e35db0-1807-41af-8ce0-e08b12151617)
 
-[Visualisation link](https://public.tableau.com/app/profile/sergei.levkov/viz/PopularityofGermanNames/PopularityofGermannames)
+[Visualisation link](https://public.tableau.com/app/profile/sergei.levkov/viz/PopularityofGermanNames/NamesRating?publish=yes)
 
 ### Process
 
